@@ -1,10 +1,5 @@
 @extends('user.template')
 
-@section('summernote')
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-@endsection
-
 @section('h1')
   Modifier le livre
 @endsection
@@ -32,13 +27,7 @@
                 <label for="content">Avis</label>
                 <textarea name="content" id="content" class="form-control" rows="10">{{ $livre->content }}</textarea>
                 <div class="text-danger">{{$errors->first('content',":message") }}</div>
-                <script>
-                    $('#content').summernote({
-                      placeholder: 'Bonne rédaction',
-                      tabsize: 2,
-                      height: 500
-                    });
-                  </script>
+                
 
 <div class="form-group">
     <label for="Note">Note/20</label>

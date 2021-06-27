@@ -34,6 +34,6 @@ Route::get("/user/index", [App\Http\Controllers\User\UserController::class, "ind
 Route::get("user/livres/index", [App\Http\Controllers\User\LivreController::class, "index"]) ->name('user.livres.index');
 Route::get("user/livres/create", [App\Http\Controllers\User\LivreController::class, "create"]) ->name('user.livres.create');
 Route::post("user/livres/store", [App\Http\Controllers\User\LivreController::class, "store"]) ->name('user.livres.store');
-Route::get("user/livres/update/{id}", [App\Http\Controllers\User\LivreController::class, "edit"]) ->name('user.livres.edit');
+Route::get("user/livres/edit/{id}", [App\Http\Controllers\User\LivreController::class, "edit"]) ->name('user.livres.edit');
 Route::patch("user/livres/update/{id}", [App\Http\Controllers\User\LivreController::class, "update"]) ->name('user.livres.update');
 Route::delete("user/livres/delete/{id}", [App\Http\Controllers\User\LivreController::class, "destroy"]) ->name('user.livres.delete');
